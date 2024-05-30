@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnu01D"
+        android:title="REVISAR PACIENTES" />
+    <item
+        android:id="@+id/mnu02D"
+        android:title="VER CITAS" />
+    <item
+        android:id="@+id/mnu03D"
+        android:title="CERRAR SESIÓN" />
+</menu>

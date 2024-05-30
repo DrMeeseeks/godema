@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- COEMA_LOGO -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/coemalogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Título de la página -->
+    <TextView
+        android:id="@+id/pageTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Lista de Recetas"
+        android:textColor="#000000" />
+
+    <!-- Contenedor de desplazamiento -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pageTitleTextView"
+        android:fillViewport="true">
+
+        <!-- Contenido de la lista de recibos -->
+        <LinearLayout
+            android:id="@+id/tratamientosLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Cabecera de columna -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- CheckBox -->
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tam"
+                    android:layout_weight="1"
+                    android:padding="8dp"/>
+
+                <!-- Nombre del recibo -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nombre"
+                    android:padding="8dp" />
+
+                <!-- Fecha -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medicamento"
+                    android:padding="8dp" />
+
+                <!-- Monto -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dosis"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <!-- RecyclerView para mostrar los recibos -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Botones fuera de receiptsLinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <!-- Botón "Editar Historial" -->
+        <Button
+            android:id="@+id/editRecetaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar Receta"
+            android:backgroundTint="#10aac1"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Botón "Agregar Pago" -->
+        <Button
+            android:id="@+id/addRecetaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#10aac1"
+            android:text="Agregar Receta" />
+    </LinearLayout>
+</RelativeLayout>

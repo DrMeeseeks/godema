@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- COEMA_LOGO -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/coemalogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Título de la página -->
+    <TextView
+        android:id="@+id/pageTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Editar Pago"
+        android:textColor="#FFFFFF"
+        android:background="#000000"
+        android:padding="8dp" />
+
+    <!-- Input de Paciente -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/patientInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pageTitleTextView"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/patientEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Paciente" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input de Fecha -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patientInputLayout"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha"
+            android:focusable="false"
+            android:clickable="true"
+            android:onClick="showDatePickerDialog" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input de Monto -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amountInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateInputLayout"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/amountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Monto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input de Motivo de Cobro -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reasonInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amountInputLayout"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/reasonEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Motivo de Cobro" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/addPaymentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Pago"
+        android:layout_below="@id/reasonInputLayout"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.NOTIFY" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.COEMA"
+        tools:targetApi="31">
+
+        <!-- Configurar la actividad de inicio de sesión como actividad principal -->
+        <activity
+            android:name=".Index.Principal"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Index.MenuRecibosActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Login.IniciarSesion"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Registro.RegistroOdontologo"
+            android:exported="true"/>
+        <activity
+            android:name=".Registro.RegistroCitas"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Index.PacienteVerCita"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Index.NotifyMod"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Index.PacientesMod"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Registro.RegitroPago"
+            android:label="Registro de Pago">
+        </activity>
+        <activity
+            android:name=".Registro.RegistroPagoEdit"
+            android:label="Editar Pago">
+        </activity>
+        <activity
+            android:name=".Registro.RegitrarPagoPaciente"
+            android:label="Editar Pago">
+        </activity>
+        <activity
+            android:name=".Registro.RegistroDescansoEdit"
+            android:label="Editar Pago">
+        </activity>
+        <activity
+            android:name=".Registro.RegistroDescansos"
+            android:label="Editar Pago">
+        </activity>
+        <activity
+            android:name=".Index.ListarDescanso"
+            android:label="Editar Pago">
+        </activity>
+        <activity
+            android:name=".Registro.RegistroTratamientos"
+            android:label="Editar Pago">
+        </activity>
+        <activity
+            android:name=".Registro.CrudOdontologo"
+            android:label="Crud Odo">
+        </activity>
+        <activity
+            android:name=".Registro.RegistroTratamientosEdit"
+            android:label="Editar Pago">
+        </activity>
+        <activity
+            android:name=".Index.ActMenuOdonto"
+            android:label="MenuOdo">
+        </activity>
+        <activity
+            android:name=".Index.ListarTratamientos"
+            android:label="Editar Pago">
+        </activity>
+        <activity
+            android:name=".Index.ActMenuAdmin"
+            android:label="Menu Administrador">
+        </activity>
+        <activity
+            android:name=".Registro.RegistroPacientes"
+            android:exported="false"/>
+        <activity
+            android:name=".Login.IniciarSesionAdmin"
+            android:exported="false"/>
+        <activity
+            android:name=".Registro.RegistroDescanso"
+            android:exported="false"/>
+        <activity
+            android:name=".Registro.RegistroReceta"
+            android:exported="false"/>
+        <activity
+            android:name=".Index.ListarPaciente"
+            android:exported="false"/>
+        <activity
+            android:name=".Registro.RegistroPacientesEdit"
+            android:exported="false"/>
+        <activity
+            android:name=".Perfil.PacientePrincipal"
+            android:exported="false"/>
+        <activity android:name="com.example.coema.Index.ListarCitas">
+            <!-- Pueden haber más configuraciones aquí -->
+        </activity>
+        <activity
+            android:name=".Index.VerDocumentos"
+            android:exported="false"/>
+        <activity
+            android:name=".Index.VerCitas"
+            android:exported="false"/>
+        <activity android:name=".Index.PacienteVerDocumentos" />
+        <activity
+            android:name=".Perfil.PerfilPaciente"
+            android:exported="false"/> <!-- Configurado como "false" -->
+    </application>
+
+
+</manifest>

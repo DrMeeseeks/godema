@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="REGISTRO" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtCod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CÓDIGO(CMP)"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="50" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtApePatLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtNombres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="NOMBRES"
+                        android:inputType="textPersonName"
+                        android:lines="1"
+                        android:maxLength="50" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtNombreLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtApellidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="APELLIDOS"
+                        android:inputType="textPersonName"
+                        android:lines="1"
+                        android:maxLength="50" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtTelefonoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtCorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CORREO"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:maxLength="50" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtFecNacLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtContra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CONTRASEÑA"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:maxLength="50" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Especialidad del Odontologo:"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.121"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.073" />
+
+
+                <Spinner
+                    android:id="@+id/spnEsp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/background_edt"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="20dp"/>
+                <Button
+                    android:id="@+id/btnSesionDes"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="REGISTRAR ODONTÓLOGO" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSiguiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irSitio"
+                android:text="Siguiente"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

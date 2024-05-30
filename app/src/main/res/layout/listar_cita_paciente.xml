@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- COEMA_LOGO -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/coema_nombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Título de la página -->
+    <TextView
+        android:id="@+id/pageTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Lista de tus Citas"
+        android:textColor="#000000" />
+
+    <!-- Contenedor de desplazamiento -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pageTitleTextView"
+        android:fillViewport="true">
+
+        <!-- Contenido de la lista de recibos -->
+        <LinearLayout
+            android:id="@+id/tratamientosLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Cabecera de columna -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- CheckBox -->
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Nombre" />
+
+                <!-- Nombre del recibo -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Tratamiento" />
+
+                <!-- Fecha -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Fecha" />
+
+            </LinearLayout>
+
+            <!-- RecyclerView para mostrar los recibos -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerVieww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Botones fuera de receiptsLinearLayout -->
+</RelativeLayout>

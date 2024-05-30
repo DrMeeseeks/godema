@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- COEMA_LOGO -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/coemalogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Título de la página -->
+    <TextView
+        android:id="@+id/pageTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Agregar Descanso Médico"
+        android:textColor="#FFFFFF"
+        android:background="#000000"
+        android:padding="8dp" />
+
+    <!-- Input de Paciente -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/patientInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pageTitleTextView"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/pacienteEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Paciente"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input de Monto -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amountInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patientInputLayout"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/tratCitEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tratamiento de la Cita" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input de Motivo de Cobro -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reasonInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amountInputLayout"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/descansoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descanso" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/addDescansoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Descanso Médico"
+        android:backgroundTint="#10aac1"
+        android:layout_below="@id/reasonInputLayout"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>

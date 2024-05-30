@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="413dp"
+        android:layout_height="601dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.723">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/coema_nombre" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="fecha_cita"
+                    app:srcCompat="@drawable/ic_plan_date" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="perfilPaciente"
+                    android:text="PERFIL"
+                    android:textColor="@color/black"
+                    app:backgroundTint="#10aac1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="fecha_cita"
+                    app:srcCompat="@drawable/ic_plan_date" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="seleccionar_cita"
+                    app:srcCompat="@drawable/ic_change" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="registrarCita"
+                    android:text="AGENDAR CITA"
+                    android:textColor="@color/black"
+                    app:backgroundTint="#10aac1" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="listarCitasPaciente"
+                    android:text="PAGOS Y RECIBOS"
+                    android:textColor="@color/black"
+                    app:backgroundTint="#10aac1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="fecha_cita"
+                    app:srcCompat="@drawable/ic_plan_date" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="seleccionar_cita"
+                    app:srcCompat="@drawable/ic_change" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="registrarCita"
+                    android:text="DESCANSO MÉDICO O RECETA MÉDICA"
+                    android:textColor="@color/black"
+                    app:backgroundTint="#10aac1" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="VER CITAS"
+                    android:onClick="verCitas"
+                    android:textColor="@color/black"
+                    app:backgroundTint="#10aac1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="sobrenosotros"
+                    app:srcCompat="@drawable/ic_info" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="seleccionar_cita"
+                    app:srcCompat="@drawable/ic_change" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="verTratamientos"
+                    android:text="VER TRATAMIENTOS"
+                    android:textColor="@color/black"
+                    app:backgroundTint="#10aac1" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="confirmarCita"
+                    android:text="Notificar Cita"
+                    android:textColor="@color/black"
+                    app:backgroundTint="#10aac1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="salir"
+                    app:srcCompat="@drawable/ic_exit" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="salirPrincipalPaciente"
+                    android:textColor="@color/black"
+                    android:text="CERRAR SESIÓN"
+                    app:backgroundTint="#10aac1" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

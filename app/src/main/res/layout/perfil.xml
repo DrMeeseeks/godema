@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título "Mi Perfil" -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mi Perfil"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/imPerfil"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/btnSeleccionarImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="0dp"
+        android:text="Seleccionar Imagen"
+        android:backgroundTint="#10aac1"
+        android:layout_gravity="center_horizontal"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <EditText
+        android:id="@+id/editTextFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombres"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellidos"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextBirthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de Nacimiento"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editTextGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Género"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo"
+        android:inputType="textPostalAddress" />
+
+    <EditText
+        android:id="@+id/editTextIdentification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número de Teléfono"
+        android:inputType="phone" />
+    <EditText
+        android:id="@+id/editTextDocumento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Historial Médico Previo (opcional)"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#10aac1"
+        android:text="Guardar Cambios" />
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#10aac1"
+        android:text="Cancelar" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
